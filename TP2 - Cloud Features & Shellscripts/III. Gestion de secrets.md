@@ -1,5 +1,7 @@
 # III. Gestion de secrets
 
+## Créer un Key Vault
+
 ```bash
 israel@hpvictusBJI:~$ az keyvault create -g azure-tp1 -n kv-is-tp2 --locatio
 n francecentral --enable-rbac-authorization false
@@ -63,6 +65,8 @@ n francecentral --enable-rbac-authorization false
 }
 ```
 
+## ➜ Créer un secret
+
 ```bash
 israel@hpvictusBJI:~$ az keyvault secret set --vault-name kv-is-tp2 --name T
 estSecret --value "on va tester voir, si cela fonctionne ou pas"
@@ -95,6 +99,8 @@ israel@hpvictusBJI:~$ az vm identity assign -g azure-tp1 -n azure1.tp1
   "userAssignedIdentities": {}
 }
 ```
+
+## Configurer une Access policy
 
 ```bash
 israel@hpvictusBJI:~$ az keyvault set-policy --name kv-is-tp2 --object-id 950d1126-cab8-4b0c-9ec0-992e97e77a47 --secret-permissions get
