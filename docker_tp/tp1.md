@@ -155,21 +155,6 @@ server {
 ```
 
 ```bash
-azureuser@docis:~$ sudo docker run -v /etc/nginx/nginx.conf:/etc/nginx/nginx.conf nginx
-/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
-/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
-/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
-10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
-10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
-/docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
-/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
-/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
-/docker-entrypoint.sh: Configuration complete; ready for start up
-2026/03/20 10:41:43 [emerg] 1#1: "listen" directive is not allowed here in /etc/nginx/nginx.conf:1
-nginx: [emerg] "listen" directive is not allowed here in /etc/nginx/nginx.conf:1
-```
-
-```bash
 azureuser@docis:~$ sudo docker run --name meow -d -v ~/work/sites/:/var/www/tp_docker -v ~/work/toto.conf:/etc/nginx/conf.d/toto.conf -p 9
 999:7777 nginx
 27eb37ee0b4c6f457821c8139e02ea7f2cdcecf989171e3740cb74708fbcb30d
