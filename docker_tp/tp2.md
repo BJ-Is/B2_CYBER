@@ -93,27 +93,3 @@ img_test:latest      4bc8f6762cd7        371MB          107MB
 nginx:latest         dec7a90bd097        240MB         65.8MB    U
 azureuser@docis:~/workfiles$
 ```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
